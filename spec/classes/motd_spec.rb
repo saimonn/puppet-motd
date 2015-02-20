@@ -7,6 +7,10 @@ describe 'motd', :type => :class do
         :osfamily         => 'Debian',
         :lsbdistcodename  => 'squeeze',
         :concat_basedir   => '/dne',
+        :id               => 'root',
+        :is_pe            => true,
+        :kernel           => '3.13.0-45-generic',
+        :path             => '/usr/bin:/bin'
       }
     end
     it { should contain_exec('update motd').with({
@@ -26,6 +30,10 @@ describe 'motd', :type => :class do
         :osfamily         => 'Debian',
         :lsbdistcodename  => 'wheezy',
         :concat_basedir   => '/dne',
+        :id               => 'root',
+        :is_pe            => true,
+        :kernel           => '3.13.0-45-generic',
+        :path             => '/usr/bin:/bin'
       }
     end
     it { should contain_exec('update motd').with({
@@ -44,6 +52,10 @@ describe 'motd', :type => :class do
       {
         :osfamily         => 'RedHat',
         :concat_basedir   => '/dne',
+        :id               => 'root',
+        :is_pe            => true,
+        :kernel           => '3.13.0-45-generic',
+        :path             => '/usr/bin:/bin'
       }
     end
     it { should contain_exec('update motd').with({

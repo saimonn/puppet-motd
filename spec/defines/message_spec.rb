@@ -8,6 +8,10 @@ describe 'motd::message', :type => :define do
     {
       :osfamily         => 'RedHat',
       :concat_basedir   => '/dne',
+      :id               => 'root',
+      :is_pe            => true,
+      :kernel           => '3.13.0-45-generic',
+      :path             => '/usr/bin:/bin'
     }
   end
 
